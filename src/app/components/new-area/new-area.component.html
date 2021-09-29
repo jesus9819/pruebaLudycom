@@ -1,0 +1,66 @@
+<!-- navbar -->
+<app-menu></app-menu>
+<!-- fin navbar -->
+
+
+
+<!-- formulario de creacion de area -->
+<div class="container mt-5">
+
+    <div class="row">
+    
+        <div class="col">
+    
+            <form (ngSubmit)="guardar(f)" #f="ngForm">
+                <div class="form-group">
+                    <label>Codigo</label>
+                    <input type="text" [(ngModel)]="area.codigo"  name="codigo" class="form-control" placeholder="Codigo Area" required>
+                </div>
+    
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" [(ngModel)]="area.nombre"  name="nombre" class="form-control" placeholder="Nombres de Area " required>
+                </div>
+    
+               
+               
+               
+                
+                <div class="form-group">
+                    <label>Lider</label>
+                    <input type="text" [(ngModel)]="area.lider" name="lider" class="form-control" placeholder="Lider" required>
+                </div>
+             
+    
+                <div class="form-group">
+                    <label>Estado (Haz click para escoger una opción)</label>
+                    <br>
+    
+    
+                    <button *ngIf="area.estado" (click)="area.estado = false" class="btn btn-outline-success w-50" type="button">
+                        <i class="fa fa-smile-wink"></i>
+                        Activo
+                    </button>
+    
+                <button *ngIf="!area.estado" (click)="area.estado = true" class="btn btn-outline-danger w-50" type="button">
+                        <i class="fa fa-dizzy"></i>
+                        Inactivo
+                    </button>
+                </div>
+    
+    
+                <hr>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary w-25">
+                         <i class="fa fa-save"></i>
+                         Guardar
+                      </button>
+                </div>
+    
+            </form>
+    
+        </div>
+    
+    </div>
+    </div>
+   <!-- fin de formulario de creaccion de area -->

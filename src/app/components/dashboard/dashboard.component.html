@@ -1,0 +1,60 @@
+<!-- inicio navbar -->
+<app-menu></app-menu>
+<!-- fin navbar -->
+
+ <!-- inicio contendido dashboard -->
+<div class="container mt-5"> 
+    
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-blue">
+                <div class="inner">
+                    <h3> {{empleados}}</h3>
+                    <p>Empleados </p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+                <a href="#" routerLink="/home" routerLinkActive="active" class="card-box-footer">Ver Más <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-green">
+                <div class="inner">
+                    <h3> {{numArea}} </h3>
+                    <p> Areas </p>
+                </div>
+                <div class="icon">
+                    <i class=" fas fa-grip-horizontal" aria-hidden="true"></i>
+                </div>
+                <a href="#" routerLink="/area" routerLinkActive="active" class="card-box-footer">Ver Más <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-orange">
+                <div class="inner">
+                    <h3>{{activos}} </h3>
+                    <p> Usuarios Activos </p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-user-check" aria-hidden="true"></i>
+                </div>
+                <a href="#" routerLink="/home" routerLinkActive="active" class="card-box-footer">Ver Más <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-red">
+                <div class="inner">
+                    <h3> {{inactivos}} </h3>
+                    <p>Usuarios Inactivos </p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-users-slash"></i>
+                </div>
+                <a href="#" routerLink="/home" routerLinkActive="active" class="card-box-footer">Ver Más <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin de contendido del dashboard -->

@@ -1,0 +1,5 @@
+ul li {
+    float: right;
+    list-style-type: none;
+    text-align: left;
+  }

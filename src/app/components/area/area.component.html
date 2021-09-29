@@ -1,0 +1,60 @@
+<!-- inicio navbar -->
+<app-menu></app-menu>
+<!-- fin navbar -->
+
+
+<!-- vista de areas creadas -->
+<div class="container mt-5">
+
+    <div class="row">
+      <div class="col text-right">
+          <button class="btn btn-primary" routerLink="/newArea">
+              <i class=" fa fa-plus"></i>
+              Agregar area
+          </button>
+          <div class="col text-left">
+            <button class="btn btn-primary" routerLink="/dashboard">
+                <i class=" fas fa-long-arrow-alt-left"></i>
+               Regresar
+            </button>
+        </div>
+      </div>
+    </div>
+<div class=" row justify-content-center">
+    <div class="col-auto">
+    <table class="table mt-3 animate__animated animate__fadeIn animate__faster table-responsive  ">
+      <thead class="thead-dark">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Lider</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+              
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let area of dataService.getAreas(); let i = index">
+              <th scope="row">{{ i + 1}}</th>
+              <td>{{area.codigo}}</td>
+              <td>{{area.nombre}}</td>
+              <td>{{area.lider}}</td>
+              <td><label *ngIf="area.estado" class="badge badge-success">Activo</label>
+                <label *ngIf="!area.estado" class="badge badge-warning">Inactivo</label>
+            </td>
+              <td><button type="button" class="btn btn-info btn-sm">Editar</button>
+                  <button type="button" (click)="borrar(area)" class="btn btn-danger btn-sm">Borrar</button></td>
+  
+          </tr>
+             
+          
+      </tbody>
+  </table>
+</div>
+</div>
+  
+  
+    </div>
+  
+<!-- fin vista de areas creadas -->
